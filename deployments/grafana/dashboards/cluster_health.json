@@ -1,0 +1,20 @@
+{
+  "annotations": { "list": [] },
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Node Health",
+      "targets": [{ "expr": "k8s_nodes_ready_total" }]
+    },
+    {
+      "type": "graph",
+      "title": "Pod Running vs Failed",
+      "targets": [
+        { "expr": "k8s_pods_running_total" },
+        { "expr": "k8s_pods_failed_total" }
+      ]
+    }
+  ],
+  "schemaVersion": 37,
+  "version": 1
+}
